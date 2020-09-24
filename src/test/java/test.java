@@ -1,4 +1,7 @@
 
 public class test {
-
-}tge
+public static void main(String args[]) {
+	
+	System.out.println("Print new");
+}
+}
