@@ -1,5 +1,8 @@
 package com.application.framework.StepDefinitions;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
@@ -11,7 +14,9 @@ public class Signin {
 	@Given("^open the application$")
 	public void open_the_application() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
+	    WebDriver driver = new ChromeDriver();
+	    driver.get("https://www.ajio.com/");
 		throw new PendingException();
 	}
 
