@@ -9,3 +9,6 @@ Examples:
 |User |Username 						|Password |
 |Tamil|Se.tamil333@gmail.com|Idiot@123|
 
+Scenario: check it
+Given check it
+
