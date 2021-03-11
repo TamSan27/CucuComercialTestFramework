@@ -10,18 +10,20 @@ import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Signin{
 
 	@Given("^open the application$")
 	public void open_the_application() throws Throwable {
 		// Write code here that turns the phrase above into concrete actions
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
-	    WebDriver driver = new ChromeDriver();
+	//	System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\test\\resources\\executables\\chromedriver.exe");
+	    WebDriverManager.chromedriver().setup();
+	    
+		WebDriver driver = new ChromeDriver();
 		System.out.println("calling the method");
 		//Setup();
 	    driver.get("https://www.ajio.com/");
-		throw new PendingException();
 	}
 
 	@When("^Tamil enters username and password$")
